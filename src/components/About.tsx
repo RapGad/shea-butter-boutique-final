@@ -7,19 +7,17 @@ export const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Our Story</h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                At Pure Shea, we believe in the transformative power of nature's finest ingredients. 
-                Our journey began with a simple mission: to bring the authentic benefits of raw shea butter 
-                and natural extracts to people who value quality and purity.
+                We specialize in premium raw shea extract, providing the highest concentration and purity 
+                for professional formulations. Our journey began with a simple mission: to deliver pure, 
+                unrefined raw extract that honors traditional extraction methods and modern quality standards.
               </p>
               <p>
-                Every product we offer is carefully sourced from trusted suppliers who share our commitment 
-                to sustainability and ethical practices. We work directly with communities that have perfected 
-                the art of extracting and processing shea butter for generations.
+                Working directly with local communities in West Africa, we ensure that every batch maintains 
+                its natural integrity while supporting sustainable practices and fair trade. Our commitment to 
+                quality means you receive only the most concentrated, professional-grade raw extract available.
               </p>
               <p>
-                Our dedication to quality means that every jar of shea butter and every bottle of extract 
-                maintains its natural properties and beneficial nutrients. No refinement, no additives—just 
-                pure, natural goodness the way nature intended.
+                Every container delivers the pure essence of nature's most powerful skincare ingredient.
               </p>
             </div>
           </div>

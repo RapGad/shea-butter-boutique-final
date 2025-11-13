@@ -4,16 +4,16 @@ import extractImage from "@/assets/product-extract.jpg";
 
 const products = [
   {
-    title: "Premium Shea Butter",
-    description: "100% pure, unrefined shea butter rich in vitamins A, E, and F. Perfect for deep moisturization and skin healing.",
-    image: butterImage,
-    features: ["Unrefined & Natural", "Rich in Vitamins", "Deep Moisturizing", "Anti-aging Properties"]
+    title: "Premium Raw Extract",
+    description: "100% pure, unrefined raw shea extract rich in vitamins A, E, and F. Perfect for professional formulations and direct application.",
+    image: extractImage,
+    features: ["Unrefined & Natural", "Highly Concentrated", "Rich in Vitamins", "Professional Grade"]
   },
   {
-    title: "Raw Shea Extract",
-    description: "Concentrated shea extract for enhanced skincare formulations. Ideal for professional use and DIY beauty products.",
-    image: extractImage,
-    features: ["Highly Concentrated", "Pure & Organic", "Versatile Use", "Professional Grade"]
+    title: "Organic Raw Extract",
+    description: "Certified organic raw shea extract for enhanced skincare formulations. Ideal for cosmetic manufacturers and DIY beauty products.",
+    image: butterImage,
+    features: ["100% Organic", "Pure & Natural", "Versatile Use", "Premium Quality"]
   }
 ];
 
@@ -22,9 +22,9 @@ export const Products = () => {
     <section id="products" className="py-24 bg-warm-gradient">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Our Products</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Our Raw Extracts</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Handpicked natural products that bring the essence of pure wellness to your daily routine
+            Premium raw shea extracts for professional formulations and natural skincare
           </p>
         </div>
 
