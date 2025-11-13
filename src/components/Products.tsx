@@ -2,18 +2,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import butterImage from "@/assets/product-butter.jpg";
 import extractImage from "@/assets/product-extract.jpg";
 
-const products = [
+const services = [
   {
-    title: "Premium Raw Extract",
-    description: "100% pure, unrefined raw shea extract rich in vitamins A, E, and F. Perfect for professional formulations and direct application.",
+    title: "Quality Commodity Sourcing",
+    description: "Access to VERIFIED suppliers providing HIGH Grade agricultural products for industrial usage. We bridge the gap between farmers and buyers.",
     image: extractImage,
-    features: ["Unrefined & Natural", "Highly Concentrated", "Rich in Vitamins", "Professional Grade"]
+    features: ["Verified Suppliers", "High Grade Quality", "Industrial Standards", "Direct Sourcing"]
   },
   {
-    title: "Organic Raw Extract",
-    description: "Certified organic raw shea extract for enhanced skincare formulations. Ideal for cosmetic manufacturers and DIY beauty products.",
+    title: "Trading & Distribution",
+    description: "Bulk distribution services with COMPETITIVE pricing and comprehensive market access designed to support the supply chain of essential agricultural goods.",
     image: butterImage,
-    features: ["100% Organic", "Pure & Natural", "Versatile Use", "Premium Quality"]
+    features: ["Bulk Orders", "Competitive Pricing", "Market Access", "Supply Chain Support"]
   }
 ];
 
@@ -21,25 +21,26 @@ export const Products = () => {
   return (
     <section id="products" className="py-24 bg-warm-gradient">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Our Raw Extracts</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Premium raw shea extracts for professional formulations and natural skincare
+        <div className="text-center mb-16 animate-bounce-in">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Our Services</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Quality Commodity Sourcing from verified suppliers, Trading, Bulk Distribution, competitive pricing, 
+            and market access—designed to support the supply chain of essential agricultural goods
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {products.map((product, index) => (
+          {services.map((product, index) => (
             <Card 
               key={index} 
-              className="overflow-hidden hover:shadow-soft transition-all duration-300 animate-slide-in border-border bg-card"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="overflow-hidden hover:shadow-soft hover:scale-105 transition-all duration-500 animate-slide-up border-border bg-card group"
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
               <div className="aspect-square overflow-hidden">
                 <img 
                   src={product.image} 
                   alt={product.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
               <CardContent className="p-6">
