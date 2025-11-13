@@ -1,25 +1,25 @@
-import { Leaf, Heart, Sparkles, ShieldCheck } from "lucide-react";
+import { Leaf, Heart, Sparkles, Award } from "lucide-react";
 
 const benefits = [
   {
     icon: Leaf,
-    title: "100% Natural",
-    description: "Pure, organic ingredients sourced directly from nature with no harmful additives or chemicals."
-  },
-  {
-    icon: Heart,
-    title: "Deep Nourishment",
-    description: "Rich in essential fatty acids and vitamins that deeply penetrate and nourish your skin."
+    title: "100% Pure Extract",
+    description: "Our raw extracts are completely unrefined, containing no additives or chemicals. Pure concentrated essence."
   },
   {
     icon: Sparkles,
-    title: "Multi-Purpose",
-    description: "Perfect for skin, hair, and overall wellness. One product, countless benefits."
+    title: "Vitamin Rich",
+    description: "Packed with vitamins A, E, and F, essential fatty acids, and natural antioxidants in concentrated form."
   },
   {
-    icon: ShieldCheck,
-    title: "Quality Assured",
-    description: "Rigorously tested for purity and potency. We guarantee the highest quality standards."
+    icon: Heart,
+    title: "Ethically Sourced",
+    description: "We work directly with local communities, ensuring fair trade practices and sustainable extraction methods."
+  },
+  {
+    icon: Award,
+    title: "Professional Grade",
+    description: "Highest concentration and purity standards for cosmetic manufacturers and professional formulations."
   }
 ];
 
@@ -28,9 +28,9 @@ export const Benefits = () => {
     <section id="benefits" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Why Choose Pure Shea?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Why Choose Our Raw Extracts</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Experience the difference of authentic, sustainably sourced natural ingredients
+            Experience the highest concentration and purity of raw shea extract for your formulations
           </p>
         </div>
 

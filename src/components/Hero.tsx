@@ -22,7 +22,7 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
-          alt="Premium shea butter products" 
+          alt="Premium raw shea extract" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
@@ -32,12 +32,12 @@ export const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight">
-            Pure Nature,
-            <span className="block text-primary">Pure Beauty</span>
+            Raw Extract,
+            <span className="block text-primary">Pure Power</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            Discover the authentic power of raw shea butter and natural extracts, 
-            sourced directly from nature to nourish your skin.
+            Premium raw shea extracts, unrefined and natural. 
+            The purest form for your skincare formulations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
