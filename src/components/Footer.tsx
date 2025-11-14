@@ -5,7 +5,7 @@ export const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-2xl flex items-center font-bold mb-4 text-primary">            <img
-              src="/public/favicon.ico"
+              src="/favicon.ico"
               alt="Logo"
               className="h-10 w-auto object-contain"
             />

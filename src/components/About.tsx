@@ -12,7 +12,7 @@ export const About = () => {
             <h2 className="flex items-center justify-center gap-2 text-5xl md:text-7xl font-bold mb-10 text-foreground animate-fade-in-up">About <span className="text-primary">LAMORADO</span> 
 
               <img
-              src="/public/favicon.ico"
+              src="/favicon.ico"
               alt="Logo"
               className="h-11 w-auto object-contain"
             />
