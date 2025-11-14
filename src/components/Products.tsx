@@ -1,56 +1,61 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Leaf, ShoppingCart, Truck, TrendingUp } from "lucide-react";
+import cocoaImage from "@/assets/commodity-cocoa.jpg";
+import cashewImage from "@/assets/commodity-cashew.jpg";
+import sheaImage from "@/assets/commodity-shea.jpg";
+import palmImage from "@/assets/commodity-palm.jpg";
+import coffeeImage from "@/assets/commodity-coffee.jpg";
+import grainsImage from "@/assets/commodity-grains.jpg";
 
 const commodities = [
   {
     name: "Cocoa Beans",
-    description: "Premium quality cocoa beans sourced from verified Ghanaian farmers for chocolate and confectionery industries.",
-    icon: Leaf,
+    description: "Premium quality cocoa beans sourced from verified Ghanaian farmers for chocolate and confectionery industries worldwide.",
+    image: cocoaImage,
     grade: "HIGH GRADE"
   },
   {
     name: "Cashew Nuts",
     description: "Raw and processed cashew nuts meeting international quality standards for export and local distribution.",
-    icon: ShoppingCart,
+    image: cashewImage,
     grade: "VERIFIED"
   },
   {
     name: "Shea Nuts & Butter",
     description: "Natural shea nuts and processed butter for cosmetic and pharmaceutical industrial applications.",
-    icon: Truck,
+    image: sheaImage,
     grade: "INDUSTRIAL"
   },
   {
     name: "Palm Products",
     description: "Palm oil, palm kernel, and related products for food processing and manufacturing industries.",
-    icon: TrendingUp,
+    image: palmImage,
     grade: "PREMIUM"
   },
   {
     name: "Coffee Beans",
     description: "Arabica and Robusta coffee beans from highland farms, perfect for roasting and processing.",
-    icon: Leaf,
+    image: coffeeImage,
     grade: "SPECIALTY"
   },
   {
     name: "Grains & Cereals",
     description: "Maize, rice, millet, and other grains for food processing and livestock feed industries.",
-    icon: ShoppingCart,
+    image: grainsImage,
     grade: "CERTIFIED"
   }
 ];
 
 export const Products = () => {
   return (
-    <section id="products" className="py-24 bg-warm-gradient relative overflow-hidden">
+    <section id="products" className="py-32 bg-warm-gradient relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary rounded-full blur-3xl animate-float-slow"></div>
       </div>
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 animate-scale-bounce">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-foreground animate-fade-in-up">
+      <div className="container mx-auto px-4 md:px-8 lg:px-12 relative z-10">
+        <div className="text-center mb-20 animate-scale-bounce">
+          <h2 className="text-5xl md:text-7xl font-bold mb-8 text-foreground animate-fade-in-up">
             Agricultural Commodities We Trade
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
@@ -59,34 +64,38 @@ export const Products = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto mb-20">
           {commodities.map((commodity, index) => (
             <Card 
               key={index} 
               className="overflow-hidden hover:shadow-2xl hover:scale-105 hover:-rotate-1 transition-all duration-700 animate-slide-up border-2 border-border bg-card group cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src={commodity.image} 
+                  alt={`${commodity.name} - Premium agricultural commodity from Ghana`}
+                  className="w-full h-full object-cover group-hover:scale-125 group-hover:rotate-3 transition-all duration-1000"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <span className="absolute top-4 right-4 text-xs font-bold px-4 py-2 rounded-full bg-primary/90 text-primary-foreground backdrop-blur-sm animate-pulse-glow">
+                  {commodity.grade}
+                </span>
+              </div>
+              
               <CardContent className="p-8">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all duration-500 group-hover:animate-wiggle">
-                    <commodity.icon className="w-7 h-7 text-primary group-hover:scale-125 transition-transform duration-500" />
-                  </div>
-                  <span className="text-xs font-bold px-3 py-1 rounded-full bg-primary/10 text-primary animate-pulse-glow">
-                    {commodity.grade}
-                  </span>
-                </div>
-                
-                <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
                   {commodity.name}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                <p className="text-muted-foreground leading-relaxed text-base mb-6 group-hover:text-foreground transition-colors duration-300">
                   {commodity.description}
                 </p>
                 
-                <div className="mt-6 pt-4 border-t border-border">
-                  <div className="flex items-center gap-2 text-sm text-primary font-semibold group-hover:gap-4 transition-all duration-300">
-                    <span>Learn More</span>
-                    <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
+                <div className="pt-4 border-t border-border">
+                  <div className="flex items-center gap-3 text-sm text-primary font-semibold group-hover:gap-5 transition-all duration-300">
+                    <span className="group-hover:animate-wiggle">Request Quote</span>
+                    <span className="group-hover:translate-x-3 transition-transform duration-300 text-lg">→</span>
                   </div>
                 </div>
               </CardContent>
@@ -94,15 +103,15 @@ export const Products = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
-          <div className="inline-block p-6 rounded-2xl bg-card border-2 border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-            <p className="text-lg md:text-xl text-foreground font-semibold mb-2">
+        <div className="mt-24 text-center animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
+          <div className="inline-block p-10 rounded-3xl bg-card border-2 border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+            <p className="text-xl md:text-2xl text-foreground font-semibold mb-3">
               Need a specific commodity not listed?
             </p>
-            <p className="text-muted-foreground mb-4">
-              We source a wide range of agricultural products. Contact us for custom requests.
+            <p className="text-lg text-muted-foreground mb-6 max-w-2xl">
+              We source a wide range of agricultural products. Contact us for custom requests and bulk orders.
             </p>
-            <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 animate-pulse-glow">
+            <button className="px-10 py-4 bg-primary text-primary-foreground rounded-xl font-semibold text-lg hover:shadow-lg hover:scale-105 transition-all duration-300 animate-pulse-glow">
               Get Custom Quote
             </button>
           </div>
