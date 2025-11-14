@@ -82,7 +82,7 @@ export const Contact = () => {
                   <div>
                     <div className="font-semibold text-foreground mb-1">Email</div>
                     <a href="mailto:info@pureshea.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      info@pureshea.com
+                      enquiries@lamoradogh.com
                     </a>
                   </div>
                 </div>
@@ -106,7 +106,9 @@ export const Contact = () => {
                   <div>
                     <div className="font-semibold text-foreground mb-1">Location</div>
                     <p className="text-muted-foreground">
-                      Serving customers worldwide with premium natural products
+                      G8 Franco Estates | Ofankor Hills | Accra – Ghana 
+GW-0297-1056 
+
                     </p>
                   </div>
                 </div>

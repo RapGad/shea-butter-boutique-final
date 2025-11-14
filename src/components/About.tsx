@@ -32,17 +32,17 @@ export const About = () => {
 
           <div className="grid md:grid-cols-3 gap-10 mt-24">
             <div className="text-center p-10 rounded-3xl bg-card border-2 border-border animate-slide-in-left hover:shadow-2xl hover:-translate-y-6 hover:border-primary/50 hover:rotate-2 transition-all duration-700 group cursor-pointer">
-              <div className="text-7xl md:text-8xl font-bold text-primary mb-6 animate-pulse-glow group-hover:scale-125 transition-transform duration-500">VERIFIED</div>
+              <div className="text-6xl md:text-6xl font-bold text-primary mb-6 animate-pulse-glow group-hover:scale-125 transition-transform duration-500">VERIFIED</div>
               <div className="text-xl md:text-2xl text-foreground font-semibold mb-2 group-hover:text-primary transition-colors duration-300">Suppliers Network</div>
               <p className="text-base text-muted-foreground mt-3 group-hover:text-foreground transition-colors duration-300">Thoroughly vetted and certified</p>
             </div>
             <div className="text-center p-10 rounded-3xl bg-card border-2 border-border animate-bounce-in hover:shadow-2xl hover:-translate-y-6 hover:border-primary/50 hover:scale-105 transition-all duration-700 group cursor-pointer" style={{ animationDelay: "0.1s" }}>
-              <div className="text-7xl md:text-8xl font-bold text-primary mb-6 animate-pulse-glow group-hover:scale-125 transition-transform duration-500">HIGH</div>
+              <div className="text-6xl md:text-6xl font-bold text-primary mb-6 animate-pulse-glow group-hover:scale-125 transition-transform duration-500">HIGH</div>
               <div className="text-xl md:text-2xl text-foreground font-semibold mb-2 group-hover:text-primary transition-colors duration-300">Grade Quality</div>
               <p className="text-base text-muted-foreground mt-3 group-hover:text-foreground transition-colors duration-300">Industrial-grade excellence</p>
             </div>
             <div className="text-center p-10 rounded-3xl bg-card border-2 border-border animate-slide-in-right hover:shadow-2xl hover:-translate-y-6 hover:border-primary/50 hover:-rotate-2 transition-all duration-700 group cursor-pointer" style={{ animationDelay: "0.2s" }}>
-              <div className="text-7xl md:text-8xl font-bold text-primary mb-6 animate-pulse-glow group-hover:scale-125 transition-transform duration-500">24/7</div>
+              <div className="text-6xl md:text-6xl font-bold text-primary mb-6 animate-pulse-glow group-hover:scale-125 transition-transform duration-500">24/7</div>
               <div className="text-xl md:text-2xl text-foreground font-semibold mb-2 group-hover:text-primary transition-colors duration-300">Support</div>
               <p className="text-base text-muted-foreground mt-3 group-hover:text-foreground transition-colors duration-300">Always here to assist you</p>
             </div>

@@ -34,7 +34,7 @@ export const SEO = ({
       "name": "LAMORADO",
       "description": description,
       "url": window.location.origin,
-      "logo": `${window.location.origin}/placeholder.svg`,
+      "logo": `/public/favicon.ico`,
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "GH",

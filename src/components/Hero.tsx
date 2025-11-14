@@ -44,27 +44,53 @@ export const Hero = () => {
             </span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-10 text-foreground leading-tight">
-            <span className="block animate-slide-in-left mb-4" style={{ animationDelay: "0.1s" }}>LAMORADO</span>
-            <span className="block text-primary animate-slide-in-right text-5xl md:text-7xl lg:text-8xl" style={{ animationDelay: "0.3s" }}>
-              Your Agricultural Commodity Connect
-            </span>
-          </h1>
-          
-          <p className="text-2xl md:text-4xl text-foreground mb-8 leading-relaxed font-semibold animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-            Trading, Sourcing & Distributing Farm-Produced Goods Across Ghana
-          </p>
-          
-          <p className="text-lg md:text-2xl text-muted-foreground mb-8 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
-            Connect with <span className="text-foreground font-semibold">traders, farmers, and businesses</span> seeking reliable commodity trading solutions. 
-            We provide <span className="text-primary font-bold">Quality Commodity Sourcing</span> from <span className="text-foreground font-bold">VERIFIED suppliers</span>, 
-            Trading, <span className="text-foreground font-semibold">Bulk Distribution</span>, and <span className="text-foreground font-semibold">COMPETITIVE pricing</span>.
-          </p>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
-            We ensure availability in the expected quantity—<span className="text-primary font-bold text-3xl animate-pulse-glow">HIGH Grade</span> produce for industrial usage. 
-            With LAMORADO, trade is <span className="text-primary font-bold text-2xl">SIMPLIFIED</span>, <span className="text-primary font-bold text-2xl">EFFICIENT</span>, and easily <span className="text-primary font-bold text-2xl">SCALABLE</span>.
-          </p>
+<h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-10 text-foreground leading-tight">
+  <span
+    className="block animate-slide-in-left mb-4"
+    style={{ animationDelay: "0.1s" }}
+  >
+    LAMORADO
+  </span>
+
+  <span
+    className="block text-primary animate-slide-in-right text-2xl md:text-4xl lg:text-5xl"
+    style={{ animationDelay: "0.3s" }}
+  >
+    Your Agricultural Commodity Connect
+  </span>
+</h1>
+
+<p
+  className="text-sm md:text-base text-foreground mb-8 leading-relaxed font-semibold animate-fade-in-up"
+  style={{ animationDelay: "0.5s" }}
+>
+  Trading, Sourcing & Distributing Farm-Produced Goods Across Ghana
+</p>
+
+<p
+  className="text-sm md:text-base text-muted-foreground mb-8 leading-relaxed animate-fade-in-up"
+  style={{ animationDelay: "0.6s" }}
+>
+  Connect with <span className="text-foreground font-semibold">traders, farmers, and businesses</span> seeking
+  reliable commodity trading solutions. We provide{' '}
+  <span className="text-primary font-bold">Quality Commodity Sourcing</span> from{' '}
+  <span className="text-foreground font-bold">VERIFIED suppliers</span>, Trading,{' '}
+  <span className="text-foreground font-semibold">Bulk Distribution</span>, and{' '}
+  <span className="text-foreground font-semibold">COMPETITIVE pricing</span>.
+</p>
+
+<p
+  className="text-sm md:text-base text-muted-foreground mb-12 leading-relaxed animate-fade-in-up"
+  style={{ animationDelay: "0.7s" }}
+>
+  We ensure availability in the expected quantity—
+  <span className="text-primary font-bold text-lg animate-pulse-glow">HIGH Grade</span> produce for industrial
+  usage. With LAMORADO, trade is{' '}
+  <span className="text-primary font-bold text-lg">SIMPLIFIED</span>,{' '}
+  <span className="text-primary font-bold text-lg">EFFICIENT</span>, and easily{' '}
+  <span className="text-primary font-bold text-lg">SCALABLE</span>.
+</p>
+
           
           <div className="flex flex-col sm:flex-row gap-6 mb-16 animate-scale-bounce" style={{ animationDelay: "0.9s" }}>
             <button 
@@ -82,20 +108,21 @@ export const Hero = () => {
           </div>
 
           {/* Stats Bar */}
-          <div className="grid grid-cols-3 gap-8 p-8 rounded-3xl bg-background/80 backdrop-blur-sm border-2 border-primary/20 animate-slide-in-left" style={{ animationDelay: "1.1s" }}>
-            <div className="text-center animate-bounce-in" style={{ animationDelay: "1.2s" }}>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 animate-pulse-glow">6+</div>
-              <div className="text-sm md:text-base text-muted-foreground">Commodities</div>
-            </div>
-            <div className="text-center animate-bounce-in" style={{ animationDelay: "1.3s" }}>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 animate-pulse-glow">VERIFIED</div>
-              <div className="text-sm md:text-base text-muted-foreground">Suppliers</div>
-            </div>
-            <div className="text-center animate-bounce-in" style={{ animationDelay: "1.4s" }}>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 animate-pulse-glow">100%</div>
-              <div className="text-sm md:text-base text-muted-foreground">Quality</div>
-            </div>
-          </div>
+         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-8 rounded-3xl bg-background/80 backdrop-blur-sm border-2 border-primary/20 animate-slide-in-left" style={{ animationDelay: "1.1s" }}>
+  <div className="text-center animate-bounce-in" style={{ animationDelay: "1.2s" }}>
+    <div className="text-4xl md:text-5xl font-bold text-primary mb-2 animate-pulse-glow">6+</div>
+    <div className="text-sm md:text-base text-muted-foreground">Commodities</div>
+  </div>
+  <div className="text-center animate-bounce-in" style={{ animationDelay: "1.3s" }}>
+    <div className="text-4xl md:text-5xl font-bold text-primary mb-2 animate-pulse-glow">VERIFIED</div>
+    <div className="text-sm md:text-base text-muted-foreground">Suppliers</div>
+  </div>
+  <div className="text-center animate-bounce-in" style={{ animationDelay: "1.4s" }}>
+    <div className="text-4xl md:text-5xl font-bold text-primary mb-2 animate-pulse-glow">100%</div>
+    <div className="text-sm md:text-base text-muted-foreground">Quality</div>
+  </div>
+</div>
+
         </div>
       </div>
     </section>

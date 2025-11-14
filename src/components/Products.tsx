@@ -6,6 +6,8 @@ import palmImage from "@/assets/commodity-palm.jpg";
 import coffeeImage from "@/assets/commodity-coffee.jpg";
 import grainsImage from "@/assets/commodity-grains.jpg";
 
+import { motion } from 'framer-motion'
+
 const commodities = [
   {
     name: "Cocoa Beans",
@@ -64,44 +66,77 @@ export const Products = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto mb-20">
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto mb-20"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.2
+              }
+            }
+          }}
+        >
           {commodities.map((commodity, index) => (
-            <Card 
-              key={index} 
-              className="overflow-hidden hover:shadow-2xl hover:scale-105 hover:-rotate-1 transition-all duration-700 animate-slide-up border-2 border-border bg-card group cursor-pointer"
-              style={{ animationDelay: `${index * 0.1}s` }}
+            <motion.div
+              key={index}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    type: "spring",
+                    stiffness: 120,
+                    damping: 8
+                  }
+                }
+              }}
+              whileInView={{
+                rotate: [0, -1.5, 1.5, 0],  // small shake
+                transition: { duration: 0.4, delay: 0.1 }
+              }}
+              viewport={{ once: true }}
             >
-              <div className="aspect-video overflow-hidden relative">
-                <img 
-                  src={commodity.image} 
-                  alt={`${commodity.name} - Premium agricultural commodity from Ghana`}
-                  className="w-full h-full object-cover group-hover:scale-125 group-hover:rotate-3 transition-all duration-1000"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <span className="absolute top-4 right-4 text-xs font-bold px-4 py-2 rounded-full bg-primary/90 text-primary-foreground backdrop-blur-sm animate-pulse-glow">
-                  {commodity.grade}
-                </span>
-              </div>
-              
-              <CardContent className="p-8">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
-                  {commodity.name}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-base mb-6 group-hover:text-foreground transition-colors duration-300">
-                  {commodity.description}
-                </p>
-                
-                <div className="pt-4 border-t border-border">
-                  <div className="flex items-center gap-3 text-sm text-primary font-semibold group-hover:gap-5 transition-all duration-300">
-                    <span className="group-hover:animate-wiggle">Request Quote</span>
-                    <span className="group-hover:translate-x-3 transition-transform duration-300 text-lg">→</span>
-                  </div>
+              <Card 
+                className="overflow-hidden hover:shadow-2xl hover:scale-105 hover:-rotate-1 transition-all duration-700 animate-slide-up border-2 border-border bg-card group cursor-pointer"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="aspect-video overflow-hidden relative">
+                  <img 
+                    src={commodity.image} 
+                    alt={`${commodity.name} - Premium agricultural commodity from Ghana`}
+                    className="w-full h-full object-cover group-hover:scale-125 group-hover:rotate-3 transition-all duration-1000"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <span className="absolute top-4 right-4 text-xs font-bold px-4 py-2 rounded-full bg-primary/90 text-primary-foreground backdrop-blur-sm animate-pulse-glow">
+                    {commodity.grade}
+                  </span>
                 </div>
-              </CardContent>
-            </Card>
+                
+                <CardContent className="p-8">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
+                    {commodity.name}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed text-base mb-6 group-hover:text-foreground transition-colors duration-300">
+                    {commodity.description}
+                  </p>
+                  
+                  <div className="pt-4 border-t border-border">
+                    <div className="flex items-center gap-3 text-sm text-primary font-semibold group-hover:gap-5 transition-all duration-300">
+                      <span className="group-hover:animate-wiggle">Request Quote</span>
+                      <span className="group-hover:translate-x-3 transition-transform duration-300 text-lg">→</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <div className="mt-24 text-center animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
           <div className="inline-block p-10 rounded-3xl bg-card border-2 border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
