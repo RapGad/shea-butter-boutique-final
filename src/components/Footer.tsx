@@ -4,9 +4,9 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-primary">Pure Shea</h3>
+            <h3 className="text-2xl font-bold mb-4 text-primary">LAMORADO</h3>
             <p className="text-background/80">
-              Bringing you the finest natural shea butter and raw extracts for a healthier, more beautiful you.
+              Your trusted agricultural commodity trading partner across Ghana. Sourcing, trading, and distributing HIGH Grade farm-produced goods.
             </p>
           </div>
           
@@ -24,14 +24,14 @@ export const Footer = () => {
             <h4 className="font-bold mb-4">Connect</h4>
             <ul className="space-y-2 text-background/80">
               <li><a href="#contact" className="hover:text-primary transition-colors">Contact Us</a></li>
-              <li><a href="mailto:info@pureshea.com" className="hover:text-primary transition-colors">info@pureshea.com</a></li>
-              <li><a href="tel:+1234567890" className="hover:text-primary transition-colors">+1 (234) 567-890</a></li>
+              <li><a href="mailto:info@lamorado.com" className="hover:text-primary transition-colors">info@lamorado.com</a></li>
+              <li><a href="tel:+233123456789" className="hover:text-primary transition-colors">+233 12 345 6789</a></li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-background/20 pt-8 text-center text-background/60">
-          <p>&copy; {new Date().getFullYear()} Pure Shea. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} LAMORADO. All rights reserved.</p>
         </div>
       </div>
     </footer>
