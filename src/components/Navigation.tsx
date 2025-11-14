@@ -19,7 +19,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           <h1 className="flex items-center">
             <img
-              src="/src/assets/lr_gh.png"
+              src="/public/favicon.ico"
               alt="Logo"
               className="h-10 w-auto object-contain"
             />
