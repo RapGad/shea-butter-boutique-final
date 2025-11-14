@@ -1,10 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
-import soyImage from "@/assets/commodity-soy.webp";
-import cashewImage from "@/assets/commodity-cashew.jpg";
-import sheaImage from "@/assets/commodity-shea.jpg";
+import soyImage from "@/assets/commodity-soy.jpeg";
+import cashewImage from "@/assets/commodity-cashew.jpeg";
+import sheaImage from "@/assets/commodity-shea.jpeg";
 import cottonImage from "@/assets/commodity-cotton.webp";
 import coffeeImage from "@/assets/commodity-coffee.jpg";
-import grainsImage from "@/assets/commodity-grains.jpg";
+import grainsImage from "@/assets/commodity-maize.jpeg";
+import cassavaImage from "@/assets/commodity-cassava.jpeg";
+import sesameImage from "@/assets/commodity-sesame.jpeg";
 
 import { motion } from 'framer-motion'
 
@@ -44,7 +46,19 @@ const commodities = [
     description: "Maize, rice, millet, and other grains for food processing and livestock feed industries.",
     image: grainsImage,
     grade: "CERTIFIED"
-  }
+  },
+  {
+    name: "Cassava Chips",
+    description: "Sourced from verified farmers, our cassava chips are fresh, clean, and ready for processing. Perfect for chips production, flour, or industrial use",
+    image: cassavaImage,
+    grade: "CERTIFIED"
+  },
+  {
+    name: "Sesame Seeds",
+    description: "Our premium sesame seeds are 100% natural, packed with nutrients, and perfect for cooking, baking, or snacking. Healthy, fresh, and delicious – the tiny seed that makes a big difference!",
+    image: sesameImage,
+    grade: "CERTIFIED"
+  },
 ];
 
 export const Products = () => {
