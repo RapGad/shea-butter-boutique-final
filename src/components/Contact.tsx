@@ -75,17 +75,6 @@ export const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold mb-6 text-foreground">Contact Information</h3>
               <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-foreground mb-1">Email</div>
-                    <a href="mailto:info@pureshea.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      enquiries@lamoradogh.com
-                    </a>
-                  </div>
-                </div>
 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -106,8 +95,8 @@ export const Contact = () => {
                   <div>
                     <div className="font-semibold text-foreground mb-1">Location</div>
                     <p className="text-muted-foreground">
-                      G8 Franco Estates | Ofankor Hills | Accra – Ghana 
-GW-0297-1056 
+                      G8 Franco Estates | Ofankor Hills | GW-0297-1056 | Accra – Ghana 
+
 
                     </p>
                   </div>
@@ -116,8 +105,8 @@ GW-0297-1056
             </div>
 
             <div className="bg-secondary/50 rounded-lg p-6 border border-border">
-              <h4 className="font-bold text-foreground mb-2">Business Hours</h4>
-              <div className="text-muted-foreground space-y-1">
+              <h4 className="font-bold text-foreground mb-2 px-8">Business Hours</h4>
+              <div className="text-muted-foreground space-y-1 px-8">
                 <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                 <p>Saturday: 10:00 AM - 4:00 PM</p>
                 <p>Sunday: Closed</p>

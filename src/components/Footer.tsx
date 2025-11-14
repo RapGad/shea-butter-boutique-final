@@ -4,7 +4,14 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-primary">LAMORADO</h3>
+            <h3 className="text-2xl flex items-center font-bold mb-4 text-primary">            <img
+              src="/public/favicon.ico"
+              alt="Logo"
+              className="h-10 w-auto object-contain"
+            />
+            <span className="text-primary">LAMORADO</span>
+            </h3>
+            
             <p className="text-background/80">
               Your trusted agricultural commodity trading partner across Ghana. Sourcing, trading, and distributing HIGH Grade farm-produced goods.
             </p>

@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
-import cocoaImage from "@/assets/commodity-cocoa.jpg";
+import soyImage from "@/assets/commodity-soy.webp";
 import cashewImage from "@/assets/commodity-cashew.jpg";
 import sheaImage from "@/assets/commodity-shea.jpg";
-import palmImage from "@/assets/commodity-palm.jpg";
+import cottonImage from "@/assets/commodity-cotton.webp";
 import coffeeImage from "@/assets/commodity-coffee.jpg";
 import grainsImage from "@/assets/commodity-grains.jpg";
 
@@ -10,27 +10,27 @@ import { motion } from 'framer-motion'
 
 const commodities = [
   {
-    name: "Cocoa Beans",
+    name: "Soya Beans",
     description: "Premium quality cocoa beans sourced from verified Ghanaian farmers for chocolate and confectionery industries worldwide.",
-    image: cocoaImage,
+    image: soyImage,
     grade: "HIGH GRADE"
   },
   {
-    name: "Cashew Nuts",
+    name: "Raw Cashew Nuts",
     description: "Raw and processed cashew nuts meeting international quality standards for export and local distribution.",
     image: cashewImage,
     grade: "VERIFIED"
   },
   {
-    name: "Shea Nuts & Butter",
+    name: "Shea Nuts",
     description: "Natural shea nuts and processed butter for cosmetic and pharmaceutical industrial applications.",
     image: sheaImage,
     grade: "INDUSTRIAL"
   },
   {
-    name: "Palm Products",
+    name: "Cotton",
     description: "Palm oil, palm kernel, and related products for food processing and manufacturing industries.",
-    image: palmImage,
+    image: cottonImage,
     grade: "PREMIUM"
   },
   {

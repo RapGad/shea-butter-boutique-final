@@ -46,14 +46,19 @@ export const Hero = () => {
           
 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-10 text-foreground leading-tight">
   <span
-    className="block animate-slide-in-left mb-4"
+    className=" animate-slide-in-left mb-4 flex items-center gap-2"
     style={{ animationDelay: "0.1s" }}
   >
-    LAMORADO
+    <span className="text-primary">LAMORADO</span>
+                <img
+              src="/favicon.ico"
+              alt="Logo"
+              className="h-12 w-auto object-contain"
+            />
   </span>
 
   <span
-    className="block text-primary animate-slide-in-right text-2xl md:text-4xl lg:text-5xl"
+    className="block  animate-slide-in-right text-2xl md:text-4xl lg:text-5xl"
     style={{ animationDelay: "0.3s" }}
   >
     Your Agricultural Commodity Connect

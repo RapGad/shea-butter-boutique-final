@@ -19,9 +19,9 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           <h1 className="flex items-center">
             <img
-              src="/public/favicon.ico"
+              src="/favicon.ico"
               alt="Logo"
-              className="h-10 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
           </h1>
 
