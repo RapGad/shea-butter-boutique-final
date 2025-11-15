@@ -27,14 +27,14 @@ export const SEO = ({
       document.head.appendChild(metaKeywords);
     }
 
-    // Add structured data for Organization
-    const structuredData = {
+    // Add structured data for Organization only
+    const organizationData = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "LAMORADO",
       "description": description,
       "url": window.location.origin,
-      "logo": `/public/favicon.ico`,
+      "logo": `/favicon.ico`,
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "GH",
@@ -42,28 +42,12 @@ export const SEO = ({
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+233-12-345-6789",
+        "telephone": "+233-53-512-6757",
         "contactType": "Customer Service",
-        "email": "info@lamorado.com",
+        "email": "enquiries@lamoradogh.com",
         "availableLanguage": "English"
       },
       "sameAs": []
-    };
-
-    const productData = {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Agricultural Commodities",
-      "description": "Premium agricultural commodities from Ghana including cocoa beans, cashew nuts, shea products, palm oil, coffee beans, and grains",
-      "brand": {
-        "@type": "Brand",
-        "name": "LAMORADO"
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      }
     };
 
     let script = document.querySelector('script[type="application/ld+json"]');
@@ -72,7 +56,7 @@ export const SEO = ({
       script.setAttribute('type', 'application/ld+json');
       document.head.appendChild(script);
     }
-    script.textContent = JSON.stringify([structuredData, productData]);
+    script.textContent = JSON.stringify([organizationData]);
 
   }, [title, description, keywords]);
 
