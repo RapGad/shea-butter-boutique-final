@@ -9,7 +9,7 @@ export const About = () => {
       <div className="container mx-auto px-4 md:px-8 lg:px-12 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-20 animate-scale-bounce">
-            <h2 className="flex items-center justify-center gap-2 text-5xl md:text-7xl font-bold mb-10 text-foreground animate-fade-in-up">About <span className="text-primary">LAMORADO</span> 
+            <h2 className="flex items-center justify-center gap-2 text-3xl sm:text-4xl md:text-7xl font-bold mb-10 text-foreground animate-fade-in-up">About <span className="text-primary">LAMORADO</span> 
 
               <img
               src="/favicon.ico"

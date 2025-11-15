@@ -81,7 +81,7 @@ export const Products = () => {
         </div>
 
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto mb-20"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto mb-20"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
@@ -98,7 +98,7 @@ export const Products = () => {
             <motion.div
               key={index}
               variants={{
-                hidden: { opacity: 0, y: 50 },
+                hidden: { opacity: 1, y: 50 },
                 show: {
                   opacity: 1,
                   y: 0,
@@ -113,7 +113,7 @@ export const Products = () => {
                 rotate: [0, -1.5, 1.5, 0],  // small shake
                 transition: { duration: 0.4, delay: 0.1 }
               }}
-              viewport={{ once: true }}
+              viewport={{ once: true,amount: 0.1 }}
             >
               <Card 
                 className="overflow-hidden hover:shadow-2xl hover:scale-105 hover:-rotate-1 transition-all duration-700 animate-slide-up border-2 border-border bg-card group cursor-pointer"

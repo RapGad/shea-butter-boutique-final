@@ -55,7 +55,7 @@ export const Benefits = () => {
 
       <div className="container mx-auto px-4 md:px-8 lg:px-12 relative z-10">
         <div className="text-center mb-20 animate-scale-bounce">
-          <h2 className="flex items-center justify-center gap-2 text-5xl md:text-7xl font-bold mb-8 text-foreground animate-fade-in-up">
+          <h2 className="flex flex-col md:flex-row items-center justify-center gap-2 text-3xl sm:text-4xl md:text-7xl font-bold mb-8 text-foreground animate-fade-in-up">
             Why Choose <span className="text-primary">LAMORADO</span>{" "}
             <img
               src="/favicon.ico"

@@ -7,6 +7,9 @@ import { useToast } from "@/hooks/use-toast";
 
 export const Contact = () => {
   const { toast } = useToast();
+      const [token, setToken] = useState("");
+
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,6 +18,14 @@ export const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+        if (!token) {
+              toast({
+      title: "Recaptcha Failed!",
+      description: "Please verify that you're not a robot.",
+    });
+      return;
+    }
     toast({
       title: "Message Sent!",
       description: "Thank you for reaching out. We'll get back to you soon.",
@@ -82,8 +93,8 @@ export const Contact = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-foreground mb-1">Phone</div>
-                    <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                      +1 (234) 567-890
+                    <a href="tel:+233535126757" className="text-muted-foreground hover:text-primary transition-colors">
+                      +233 535126757
                     </a>
                   </div>
                 </div>
