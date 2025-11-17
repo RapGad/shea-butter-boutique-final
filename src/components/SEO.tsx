@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Helmet } from "react-helmet-async";
 
 interface SEOProps {
   title?: string;
@@ -6,59 +6,63 @@ interface SEOProps {
   keywords?: string;
 }
 
-export const SEO = ({ 
-  title = "LAMORADO - Agricultural Commodity Trading & Distribution in Ghana",
-  description = "Leading agricultural commodity trader in Ghana. Quality sourcing from verified suppliers, bulk distribution, competitive pricing for cocoa, cashew, shea, palm products, coffee, and grains.",
-  keywords = "agricultural commodities Ghana, cocoa beans Ghana, cashew nuts export, shea butter trading, palm oil Ghana, coffee beans Ghana, grains cereals trading, agricultural products Ghana, commodity trading Ghana, bulk distribution Ghana"
+export const SEO = ({
+  title = "LAMORADO - Agricultural Commodity Trading & Distribution in Ghana and West Africa",
+  description = "Leading agricultural commodity trader in Ghana and West Africa. Quality sourcing from verified suppliers for cashew, shea, palm products, cassava chips, coffee, and grains.",
+  keywords = "agricultural commodities Ghana, cashew Ghana, shea butter Ghana, cassava chips export, palm oil Ghana, coffee beans Ghana, cocoa Ghana, grains cereals Ghana"
 }: SEOProps) => {
-  useEffect(() => {
-    // Update meta tags
-    document.title = title;
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', description);
+
+  const organizationData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LAMORADO",
+    "description": description,
+    "url": "https://www.lamoradogh.com",
+    "logo": "https://www.lamoradogh.com/favicon.ico",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GH",
+      "addressLocality": "Ghana"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+233-53-512-6757",
+      "contactType": "Customer Service",
+      "email": "enquiries@lamoradogh.com",
+      "availableLanguage": "English"
     }
-    
-    const metaKeywords = document.querySelector('meta[name="keywords"]') || document.createElement('meta');
-    metaKeywords.setAttribute('name', 'keywords');
-    metaKeywords.setAttribute('content', keywords);
-    if (!document.querySelector('meta[name="keywords"]')) {
-      document.head.appendChild(metaKeywords);
-    }
+  };
 
-    // Add structured data for Organization only
-    const organizationData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "LAMORADO",
-      "description": description,
-      "url": window.location.origin,
-      "logo": `/favicon.ico`,
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "GH",
-        "addressLocality": "Ghana"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+233-53-512-6757",
-        "contactType": "Customer Service",
-        "email": "enquiries@lamoradogh.com",
-        "availableLanguage": "English"
-      },
-      "sameAs": []
-    };
+  return (
+    <Helmet>
+      <title>{title}</title>
 
-    let script = document.querySelector('script[type="application/ld+json"]');
-    if (!script) {
-      script = document.createElement('script');
-      script.setAttribute('type', 'application/ld+json');
-      document.head.appendChild(script);
-    }
-    script.textContent = JSON.stringify([organizationData]);
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="robots" content="index, follow" />
 
-  }, [title, description, keywords]);
+      <link rel="canonical" href="https://www.lamoradogh.com/" />
 
-  return null;
+      {/* OPEN GRAPH */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content="https://www.lamoradogh.com" />
+      <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+      {/* TWITTER */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta
+        name="twitter:image"
+        content="https://lovable.dev/opengraph-image-p98pqg.png"
+      />
+
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(organizationData)}
+      </script>
+    </Helmet>
+  );
 };

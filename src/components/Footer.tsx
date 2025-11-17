@@ -31,8 +31,8 @@ export const Footer = () => {
             <h4 className="font-bold mb-4">Connect</h4>
             <ul className="space-y-2 text-background/80">
               <li><a href="#contact" className="hover:text-primary transition-colors">Contact Us</a></li>
-              <li><a href="mailto:info@lamorado.com" className="hover:text-primary transition-colors">info@lamorado.com</a></li>
-              <li><a href="tel:+233123456789" className="hover:text-primary transition-colors">+233 12 345 6789</a></li>
+              <li><a href="mailto:enquiries@lamorado.com" className="hover:text-primary transition-colors">enquiries@lamorado.com</a></li>
+              <li><a href="tel:+233535126757" className="hover:text-primary transition-colors">+233 535126757</a></li>
             </ul>
           </div>
         </div>
