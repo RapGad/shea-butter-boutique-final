@@ -1,15 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: id } });
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setIsOpen(false);
+      }
     }
   };
 
@@ -28,7 +36,7 @@ export const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <button
-              onClick={() => scrollToSection("home")}
+              onClick={() => navigate('/')}
               className="text-foreground hover:text-primary transition-colors"
             >
               Home
@@ -46,13 +54,13 @@ export const Navigation = () => {
               Benefits
             </button>
             <button
-              onClick={() => scrollToSection("about")}
+              onClick={() => navigate('/about')}
               className="text-foreground hover:text-primary transition-colors"
             >
               About
             </button>
             <Button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => navigate('/contact')}
               variant="default"
             >
               Contact Us
@@ -93,7 +101,7 @@ export const Navigation = () => {
               About
             </button>
             <Button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => navigate('/contact')}
               variant="default"
               className="w-full"
             >

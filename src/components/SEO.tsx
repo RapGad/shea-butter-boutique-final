@@ -4,21 +4,25 @@ interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string;
+  canonicalUrl?: string;
+  structuredData?: Record<string, any>;
 }
 
 export const SEO = ({
-  title = "LAMORADO - Agricultural Commodity Trading & Distribution in Ghana and West Africa",
+  title = "LAMORADOGH - Agricultural Commodity Trading & Distribution in Ghana and West Africa",
   description = "Leading agricultural commodity trader in Ghana and West Africa. Quality sourcing from verified suppliers for cashew, shea, palm products, cassava chips, coffee, and grains.",
-  keywords = "agricultural commodities Ghana, cashew Ghana, shea butter Ghana, cassava chips export, palm oil Ghana, coffee beans Ghana, cocoa Ghana, grains cereals Ghana"
+  keywords = "agricultural commodities Ghana, cashew Ghana, shea butter Ghana, cassava chips export, palm oil Ghana, coffee beans Ghana, cocoa Ghana, grains cereals Ghana",
+  canonicalUrl = "https://www.lamoradogh.com/",
+  structuredData
 }: SEOProps) => {
 
   const organizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "LAMORADO",
+    "name": "LAMORADOGH",
     "description": description,
     "url": "https://www.lamoradogh.com",
-    "logo": "https://www.lamoradogh.com/favicon.ico",
+    "logo": "https://www.lamoradogh.com/apple-touch-icon.png",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "GH",
@@ -41,14 +45,14 @@ export const SEO = ({
       <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow" />
 
-      <link rel="canonical" href="https://www.lamoradogh.com/" />
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* OPEN GRAPH */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content="https://www.lamoradogh.com" />
-      <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content="https://www.lamoradogh.com/og-image.png" />
 
       {/* TWITTER */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -56,12 +60,12 @@ export const SEO = ({
       <meta name="twitter:description" content={description} />
       <meta
         name="twitter:image"
-        content="https://lovable.dev/opengraph-image-p98pqg.png"
+        content="https://www.lamoradogh.com/og-image.png"
       />
 
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(organizationData)}
+        {JSON.stringify(structuredData || organizationData)}
       </script>
     </Helmet>
   );
