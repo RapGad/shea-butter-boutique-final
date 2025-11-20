@@ -12,5 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
-Sitemap: https://lamoradogh.com/sitemap.xml
+Sitemap: https://www.lamoradogh.com/sitemap.xml
 
