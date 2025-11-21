@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-shea.jpg";
-import commodity from "@/assets/commodity-cassava.jpeg";
+import commodity from "@/assets/dried.png";
 import sideImage from "@/assets/side-image.jpeg";
-import logistics from "@/assets/logistics.jpeg";
-import distribution from "@/assets/distribution.jpeg";
+import cassava from "@/assets/cassava.jpg";
+import test from "@/assets/quality-control.jpeg";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Hero = () => {
   const scrollToProducts = () => {
@@ -21,6 +22,8 @@ export const Hero = () => {
     }
   };
 
+  const navigate = useNavigate()
+
   const images = [
     {
       src: commodity,
@@ -35,13 +38,13 @@ export const Hero = () => {
       description: "CEO of LAMORADOGH"
     },
     {
-      src: logistics,
+      src: cassava,
       alt: "Shea Butter Production - Natural shea products",
       title: "Proper Distribution Network",
       description: "Deliver Agri products, in and out of Ghana"
     },
     {
-      src: distribution,
+      src: test,
       alt: "Cashew Nuts - Quality cashew products from Ghana",
       title: "Quality Cashews",
       description: "Premium cashew nuts from Ghana's cashew-growing regions"
@@ -161,7 +164,7 @@ export const Hero = () => {
                   Explore Our Commodities
                 </button>
                 <button 
-                  onClick={scrollToContact}
+                  onClick={()=> navigate('/contact')}
                   className="text-xl px-12 py-8 bg-transparent border-2 border-primary/50 text-foreground rounded-xl font-semibold hover:bg-primary/20 hover:border-primary hover:scale-110 hover:rotate-2 transition-all duration-500"
                 >
                   Get in Touch
@@ -210,13 +213,6 @@ export const Hero = () => {
                       {/* Image Border Glow */}
                       <div className="absolute inset-0 rounded-3xl border-2 border-primary/30 group-hover:border-primary/50 transition-all duration-500"></div>
                       
-                      {/* Overlay Content */}
-                      <div className="absolute bottom-8 left-8 right-8 bg-background/90 backdrop-blur-sm rounded-2xl p-6 transform">
-                        <h3 className="text-xl font-bold text-foreground mb-2">{image.title}</h3>
-                        <p className="text-muted-foreground text-sm">
-                          {image.description}
-                        </p>
-                      </div>
                     </div>
                   ))}
                 </div>

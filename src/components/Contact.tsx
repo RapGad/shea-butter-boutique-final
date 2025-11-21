@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import { Mail, MapPin, Phone, Clock, ChevronDown } from "lucide-react";
 import {
@@ -9,32 +10,61 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useSearchParams } from "react-router-dom";
 
 export const Contact = () => {
   const { toast } = useToast();
   const accessKey = import.meta.env.VITE_WEB3_ACCESS_KEY;
-
-
+  const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+  const [searchParams] = useSearchParams();
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
     botCheck: ''
   });
 
+  // Pre-fill message if product parameter is present
+  useEffect(() => {
+    const product = searchParams.get('product');
+    if (product) {
+      setFormData(prev => ({
+        ...prev,
+        message: `I would like to request a quote for ${product}. Please provide pricing and availability information.\n\n`
+      }));
+    }
+  }, [searchParams]);
+
   const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
 
-    if(formData.botCheck !== '') return
+    // Bot check
+    if(formData.botCheck !== '') return;
+
+    // reCAPTCHA validation
+    if (!recaptchaToken) {
+      toast({
+        title: "reCAPTCHA Required",
+        description: "Please complete the reCAPTCHA verification.",
+        variant: "destructive"
+      });
+      return;
+    }
+
     const readyFormData = new FormData()
 
     readyFormData.append('access_key',accessKey)
     readyFormData.append('name', formData.name)
     readyFormData.append('email', formData.email)
+    readyFormData.append('phone', formData.phone)
     readyFormData.append('message', formData.message)
+    
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: readyFormData
@@ -46,15 +76,16 @@ export const Contact = () => {
         description: "Thank you for reaching out. We'll get back to you soon.",
       });
 
-      setFormData({ name: "", email: "", message: "", botCheck: "" });
+      setFormData({ name: "", email: "", phone: "", message: "", botCheck: "" });
+      setRecaptchaToken(null);
+      recaptchaRef.current?.reset();
     } else {
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
+        variant: "destructive"
       });
     }
-
-    setFormData({ name: "", email: "", message: "" ,botCheck: ''});
   };
 
   return (
@@ -93,6 +124,16 @@ export const Contact = () => {
                   />
                 </div>
                 <div>
+                  <Input
+                    type="tel"
+                    placeholder="Your Phone Number"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    required
+                    className="h-12 bg-background"
+                  />
+                </div>
+                <div>
                   <Textarea
                     placeholder="Your Message"
                     value={formData.message}
@@ -101,6 +142,29 @@ export const Contact = () => {
                     className="min-h-[150px] bg-background"
                   />
                 </div>
+                
+                {/* Google reCAPTCHA */}
+                <div className="flex justify-center">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={recaptchaSiteKey}
+                    onChange={(token) => setRecaptchaToken(token)}
+                    onExpired={() => setRecaptchaToken(null)}
+                    onErrored={() => setRecaptchaToken(null)}
+                  />
+                </div>
+
+                {/* Honeypot field for bots */}
+                <input
+                  type="text"
+                  name="botCheck"
+                  value={formData.botCheck}
+                  onChange={(e) => setFormData({ ...formData, botCheck: e.target.value })}
+                  style={{ display: 'none' }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+
                 <Button type="submit" size="lg" className="w-full text-lg h-12">
                   Send Message
                 </Button>

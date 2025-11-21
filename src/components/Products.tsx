@@ -8,7 +8,8 @@ import grainsImage from "@/assets/commodity-maize.jpeg";
 import cassavaImage from "@/assets/commodity-cassava.jpeg";
 import sesameImage from "@/assets/commodity-sesame.jpeg";
 
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const commodities = [
   {
@@ -62,6 +63,12 @@ const commodities = [
 ];
 
 export const Products = () => {
+  const navigate = useNavigate();
+
+  const handleProductClick = (productName: string) => {
+    navigate(`/contact?product=${encodeURIComponent(productName)}`);
+  };
+
   return (
     <section id="products" className="py-32 bg-warm-gradient relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
@@ -118,6 +125,7 @@ export const Products = () => {
               <Card 
                 className="overflow-hidden hover:shadow-2xl hover:scale-105 hover:-rotate-1 transition-all duration-700 animate-slide-up border-2 border-border bg-card group cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
+                onClick={() => handleProductClick(commodity.name)}
               >
                 <div className="aspect-video overflow-hidden relative">
                   <img 
@@ -160,7 +168,10 @@ export const Products = () => {
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl">
               We source a wide range of agricultural products. Contact us for custom requests and bulk orders.
             </p>
-            <button className="px-10 py-4 bg-primary text-primary-foreground rounded-xl font-semibold text-lg hover:shadow-lg hover:scale-105 transition-all duration-300 animate-pulse-glow">
+            <button 
+              onClick={() => navigate('/contact')}
+              className="px-10 py-4 bg-primary text-primary-foreground rounded-xl font-semibold text-lg hover:shadow-lg hover:scale-105 transition-all duration-300 animate-pulse-glow"
+            >
               Get Custom Quote
             </button>
           </div>

@@ -4,6 +4,8 @@ import logistics from "@/assets/logistics.jpeg";
 import distribution from '@/assets/distribution.jpeg'
 import qualityControls from '@/assets/quality-control.jpeg'
 import operations from '@/assets/operations.jpeg'
+import team from '@/assets/team.jpg'
+import absa from '@/assets/absa.png'
 import { SEO } from "./SEO";
 
 // You'll need to add this image
@@ -137,7 +139,7 @@ export const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div className="relative group animate-fade-in-up" style={{ animationDelay: "0.9s" }}>
               <img
-                src="/api/placeholder/600/400?text=Team+Collaboration"
+                src={team}
                 alt="Team collaboration"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-500"
               />
@@ -147,7 +149,7 @@ export const About = () => {
             </div>
             <div className="relative group animate-fade-in-up" style={{ animationDelay: "1.0s" }}>
               <img
-                src="/api/placeholder/600/400?text=Successful+Partnerships"
+                src={absa}
                 alt="Successful partnerships"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-500"
               />
@@ -163,11 +165,10 @@ export const About = () => {
               Partner <span className="text-primary">Associations</span>
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              {[1, 2, 3, 4, 5].map((item) => (
-                <div key={item} className="bg-card rounded-2xl p-8 border-2 border-border hover:border-primary/50 hover:scale-105 transition-all duration-500 group">
-                  <div className="w-24 h-24 mx-auto bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
-                    <span className="text-sm font-bold text-primary text-center">Association {item}</span>
-                  </div>
+              {[{image: absa}].map((item,index) => (
+                <div key={index} className="bg-card rounded-2xl p-8 border-2 border-border hover:border-primary/50 hover:scale-105 transition-all duration-500 group">
+                    <img src={item.image} className="text-sm font-bold text-primary text-center"/>
+
                 </div>
               ))}
             </div>
@@ -199,21 +200,6 @@ export const About = () => {
             </div>
           </div>
 
-          {/* Final Logo Showcase */}
-          <div className="mb-16 animate-fade-in-up" style={{ animationDelay: "1.3s" }}>
-            <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-foreground">
-              Certified <span className="text-primary">Partners</span>
-            </h3>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <div key={item} className="bg-card rounded-xl p-4 border border-border hover:border-primary/50 hover:scale-110 transition-all duration-300">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
-                    <span className="text-xs font-bold text-primary">P{item}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
 
           {/* Original Three Cards */}
           <div className="grid md:grid-cols-3 gap-10 mt-24">
