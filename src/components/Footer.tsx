@@ -1,5 +1,3 @@
-import { link } from "fs";
-
 export const Footer = () => {
   return (
     <footer className="bg-foreground text-background py-12">
