@@ -9,9 +9,9 @@ interface SEOProps {
 }
 
 export const SEO = ({
-  title = "LAMORADOGH - Agricultural Commodity Trading & Distribution in Ghana and West Africa",
-  description = "Leading agricultural commodity trader in Ghana and West Africa. Quality sourcing from verified suppliers for cashew, shea, palm products, cassava chips, coffee, and grains.",
-  keywords = "agricultural commodities Ghana, cashew Ghana, shea butter Ghana, cassava chips export, palm oil Ghana, coffee beans Ghana, cocoa Ghana, grains cereals Ghana",
+  title = "LAMORADOGH - Agricultural Commodity Trading & Distribution in Africa and West Africa",
+  description = "Leading agricultural commodity trader in Africa and West Africa. Quality sourcing from verified suppliers for cashew, shea, palm products, cassava chips, coffee, and grains.",
+  keywords = "agricultural commodities Africa, cashew Africa, shea butter Africa, cassava chips export, palm oil Africa, coffee beans Africa, cocoa Africa, grains cereals Africa, West African trade",
   canonicalUrl = "https://www.lamoradogh.com/",
   structuredData
 }: SEOProps) => {

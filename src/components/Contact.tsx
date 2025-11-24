@@ -32,6 +32,7 @@ export const Contact = () => {
 
   // Pre-fill message if product parameter is present
   useEffect(() => {
+    console.log(recaptchaSiteKey)
     const product = searchParams.get('product');
     if (product) {
       setFormData(prev => ({

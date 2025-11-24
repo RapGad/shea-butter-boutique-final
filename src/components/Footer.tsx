@@ -1,3 +1,5 @@
+import { link } from "fs";
+
 export const Footer = () => {
   return (
     <footer className="bg-foreground text-background py-12">
@@ -117,9 +119,9 @@ export const Footer = () => {
           <div>
             <h4 className="font-bold mb-4 text-lg">Follow Us</h4>
             <div className="space-y-4">
-              <p className="text-background/80 text-sm">
-                Stay updated with our latest news, products, and agricultural insights.
-              </p>
+              <p className="text-gray-400">
+              Connecting African agriculture to the world. Premium quality commodities sourced with integrity.
+            </p>
               
               {/* Brand-colored Social Media Buttons */}
               <div className="grid grid-cols-2 gap-3">
@@ -144,6 +146,7 @@ export const Footer = () => {
                   },
                   { 
                     name: 'Twitter', 
+                    link: 'https://x.com/lamoradoGH',
                     color: 'bg-[#1DA1F2] hover:bg-[#1A91DA]',
                     icon: (
                       <svg className="w-4 h-4" fill="white" viewBox="0 0 24 24">
@@ -152,7 +155,8 @@ export const Footer = () => {
                     )
                   },
                   { 
-                    name: 'LinkedIn', 
+                    name: 'LinkedIn',
+                    link: 'https://linkedin.com/in/lamorado-enterprise-2a3635397', 
                     color: 'bg-[#0A66C2] hover:bg-[#004182]',
                     icon: (
                       <svg className="w-4 h-4" fill="white" viewBox="0 0 24 24">
@@ -163,7 +167,7 @@ export const Footer = () => {
                 ].map((social) => (
                   <a
                     key={social.name}
-                    href={`https://${social.name.toLowerCase()}.com/lamoradoGH`}
+                    href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${social.color} text-white flex items-center justify-center py-2 px-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm font-medium space-x-2`}

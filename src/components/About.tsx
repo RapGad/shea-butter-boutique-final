@@ -51,7 +51,7 @@ export const About = () => {
                         <div className="space-y-10 text-lg md:text-xl text-muted-foreground leading-relaxed">
               <p className="animate-fade-in-up text-center" style={{ animationDelay: "0.2s" }}>
                 <span className="text-foreground font-bold text-2xl md:text-3xl">LAMORADOGH</span> is your trusted agricultural commodity business, 
-                connecting <span className="text-foreground font-semibold">traders, farmers, and businesses</span> seeking reliable commodity trading solutions across <span className="text-foreground font-semibold">Ghana</span>.
+                connecting <span className="text-foreground font-semibold">traders, farmers, and businesses</span> seeking reliable commodity trading solutions across <span className="text-foreground font-semibold">Africa</span>.
               </p>
               <div className="h-1 w-40 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto animate-scale-bounce" style={{ animationDelay: "0.3s" }}></div>
               <p className="animate-fade-in-up text-center" style={{ animationDelay: "0.4s" }}>
@@ -125,6 +125,7 @@ export const About = () => {
                       <p className="text-muted-foreground mt-2">Click to view on our social platform</p>
                     </div>
                   </div>
+                  </div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="bg-primary/90 text-white rounded-full p-6 transform scale-75 group-hover:scale-100 transition-transform duration-300">
                       <span className="text-2xl font-bold">View on Social Media</span>
@@ -133,7 +134,7 @@ export const About = () => {
                 </div>
               </div>
             </div>
-          </div>
+
 
           {/* Additional Images Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">

@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 const commodities = [
   {
     name: "Soya Beans",
-    description: "Premium quality cocoa beans sourced from verified Ghanaian farmers for chocolate and confectionery industries worldwide.",
+    description: "Premium quality cocoa beans sourced from verified African farmers for chocolate and confectionery industries worldwide.",
     image: soyImage,
     grade: "HIGH GRADE"
   },
@@ -83,7 +83,7 @@ export const Products = () => {
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             Sourcing, trading, and distributing <span className="text-primary font-bold">HIGH GRADE</span> farm-produced goods 
-            across Ghana with <span className="text-foreground font-semibold">VERIFIED suppliers</span> and <span className="text-foreground font-semibold">COMPETITIVE pricing</span>
+            across Africa with <span className="text-foreground font-semibold">VERIFIED suppliers</span> and <span className="text-foreground font-semibold">COMPETITIVE pricing</span>
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export const Products = () => {
                 <div className="aspect-video overflow-hidden relative">
                   <img 
                     src={commodity.image} 
-                    alt={`${commodity.name} - Premium agricultural commodity from Ghana`}
+                    alt={`${commodity.name} - Premium agricultural commodity from Africa`}
                     className="w-full h-full object-cover group-hover:scale-125 group-hover:rotate-3 transition-all duration-1000"
                     loading="lazy"
                   />
