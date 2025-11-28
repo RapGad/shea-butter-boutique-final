@@ -27,9 +27,9 @@ export const Hero = () => {
   const images = [
     {
       src: commodity,
-      alt: "LAMORADOGH Agricultural Products - High quality commodities from Ghana",
+      alt: "LAMORADOGH Agricultural Products - High quality commodities from Africa",
       title: "Premium Quality",
-      description: "Sourced directly from verified Ghanaian farmers and suppliers"
+      description: "Sourced directly from verified African farmers and suppliers"
     },
     {
       src: sideImage,
@@ -41,13 +41,13 @@ export const Hero = () => {
       src: cassava,
       alt: "Shea Butter Production - Natural shea products",
       title: "Proper Distribution Network",
-      description: "Deliver Agri products, in and out of Ghana"
+      description: "Deliver Agri products, in and out of Africa"
     },
     {
       src: test,
-      alt: "Cashew Nuts - Quality cashew products from Ghana",
+      alt: "Cashew Nuts - Quality cashew products from Africa",
       title: "Quality Cashews",
-      description: "Premium cashew nuts from Ghana's cashew-growing regions"
+      description: "Premium cashew nuts from Africa's cashew-growing regions"
     }
   ];
 
@@ -79,7 +79,7 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
-          alt="LAMORADOGH - Premium agricultural commodities from Ghana including cocoa, cashew, and shea products" 
+          alt="LAMORADOGH - Premium agricultural commodities from Africa including cocoa, cashew, and shea products" 
           className="w-full h-full object-cover animate-scale-in"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
@@ -100,7 +100,7 @@ export const Hero = () => {
             <div className="animate-slide-in-left">
               <div className="mb-8">
                 <span className="inline-block px-8 py-3 bg-primary/10 border-2 border-primary/30 rounded-full text-primary font-bold text-sm tracking-wider animate-pulse-glow">
-                  GHANA'S PREMIER AGRICULTURAL COMMODITY TRADER
+                  AFRICA'S PREMIER AGRICULTURAL COMMODITY TRADER
                 </span>
               </div>
               
@@ -129,7 +129,7 @@ export const Hero = () => {
                 className="text-sm md:text-base text-foreground mb-8 leading-relaxed font-semibold animate-fade-in-up"
                 style={{ animationDelay: "0.5s" }}
               >
-                Trading, Sourcing & Distributing Farm-Produced Goods Across Ghana
+                Trading, Sourcing & Distributing Farm-Produced Goods Across Africa
               </p>
 
               <p

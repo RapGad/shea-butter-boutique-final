@@ -26,7 +26,8 @@ export const SEO = ({
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "GH",
-      "addressLocality": "Ghana"
+      "addressLocality": "Accra",
+      "addressRegion": "Greater Accra"
     },
     "contactPoint": {
       "@type": "ContactPoint",

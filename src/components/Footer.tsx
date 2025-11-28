@@ -14,7 +14,7 @@ export const Footer = () => {
             </h3>
             
             <p className="text-background/80 mb-6">
-              Your trusted agricultural commodity trading partner across Ghana. Sourcing, trading, and distributing HIGH Grade farm-produced goods.
+              Your trusted agricultural commodity trading partner across Africa. Sourcing, trading, and distributing HIGH Grade farm-produced goods.
             </p>
             
             {/* Social Media Links with Actual Logos */}

@@ -26,7 +26,7 @@ export const About = () => {
     <>
       <SEO 
         title="About Us - LAMORADOGH | Agricultural Trading Experts" 
-        description="Learn about LAMORADOGH's mission to connect Ghanaian farmers with global markets. Experts in sourcing cassava, cashew, shea, and more."
+        description="Learn about LAMORADOGH's mission to connect African farmers with global markets. Experts in sourcing cassava, cashew, shea, and more."
         canonicalUrl="https://www.lamoradogh.com/about"
       />
     <section id="about" className="py-32 bg-warm-gradient relative overflow-hidden">
